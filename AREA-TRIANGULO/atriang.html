@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <!-- PARA CORRETA ACENTUAÇÃO -->
+<title>ÁREA DE TRIÂNGULO</title>
+<script src='pdfmake.min.js'></script> <!-- download em http://pdfmake.org/index.html#/gettingstarted-->
+<script src='vfs_fonts.js'></script> <!-- download em http://pdfmake.org/index.html#/gettingstarted-->
+<script src='funcoes.js'></script>
+<script src='funcoescanvas.js'></script>
+<body>
+<form>
+base:<br>
+<input type="number" id="base" value="30">
+<br>
+altura:<br>
+<input type="number" id="altura" value="40">
+</form>
+<p>Clique no botão para calcular a área do triângulo</p>
+<button onclick="farea()">ÁREA</button>
+<style>ins{text-decoration: none;}</style>
+Área do triângulo = <ins id="darea"></ins>
+<br><br> <!--pula 2 linhas-->
+<button onclick="fpdf()">GERAR PDF</button>
+<br><br> <!--pula 2 linhas-->
+<button onclick="ffile('triangulo.txt');">GERAR TXT</button>
+<br><br> <!--pula 2 linhas-->
+<button onclick="fdxf('triangulo.dxf');">GERAR DXF</button>
+Use um programa CAD para abrir o arquivo. Se não tiver um, baixe o MSCAD (gratuito).
+<br><br> <!--pula 2 linhas-->
+<button onclick="fcanvas();">GERAR DESENHO</button>
+<button onclick="fclearcanvas();">LIMPAR DESENHO</button>
+<br><br> <!--pula 2 linhas-->
+<canvas canvas id="myCanvas" width="1000" height="300" style="border:1px solid #d3d3d3;"> <!-- tamanho da tela que você quer-->
+Seu navegador não suporta canvas do HTML5.</canvas>
+</body>
+</html>
